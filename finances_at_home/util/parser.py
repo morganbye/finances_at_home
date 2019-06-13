@@ -14,7 +14,7 @@ def parse_args():
     args = create_argparser()
     opts = parse_argparser(args)
 
-    validate_opts
+    validate_opts(opts)
 
     return opts
 
@@ -28,6 +28,25 @@ def create_argparser():
 
     """
     parser = argparse.ArgumentParser()
+
+    parser.add_argument(
+        '-a',
+        '--account',
+        required=False,
+        help='Add file to which account'
+    )
+    parser.add_argument(
+        '-c',
+        '--config',
+        required=False,
+        help='Custom YAML config file to use'
+    )
+    parser.add_argument(
+        '-f',
+        '--file',
+        required=True,
+        help='File to load'
+    )
 
     return parser
 
@@ -44,7 +63,8 @@ def parse_argparser(parser):
     dict
 
     """
-    config = vars(parser)
+    args = parser.parse_args()
+    config = vars(args)
 
     return config
 

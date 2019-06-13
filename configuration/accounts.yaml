@@ -1,0 +1,63 @@
+scotiabank:
+  credit_card:
+    delimiter: ','
+    header: 0
+    transaction_type: '1 column'
+    columns:
+      date:
+        position: 0
+        format: 'm/d/yy'
+      payee:
+        position: 1
+      amount:
+        position: 2
+
+  chequing:
+    delimiter: ','
+    header: 0
+    transaction_type: '1 column'
+    date:
+      position: 0
+      format: 'm/d/yy'
+    amount:
+      position: 1
+    other:
+      position: 2
+    payment_type:
+      position: 3
+    payee:
+      position: 4
+
+  momentum_savings:
+    delimiter: ','
+    header: 0
+    transaction_type: 'withdraw/deposit'
+    columns:
+      date:
+        position: 0
+        format: '"mmm d, yyyy"'
+      payee:
+        position: 1
+      subaccount:
+        position: 2
+      withdraw:
+        position: 3
+      deposit:
+        position: 4
+
+  investments:
+    delimite: ','
+    header: 0
+    transaction_type: '1 column'
+    columns:
+      date:
+        position: 0
+        format: '"mmm d, yyyy"'
+      payment_type:
+        position: 1
+      description:
+        position: 2
+      currency:
+        position: 3
+      amount:
+        position: 4

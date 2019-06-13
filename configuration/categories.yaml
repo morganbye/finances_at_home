@@ -1,0 +1,12 @@
+entertainment:
+  - 'CINEMA'
+  - 'NETFLIX'
+  - 'SPOTIFY'
+
+supermarket:
+  - 'REAL CDN'
+  - 'SAVE ON FOODS'
+
+transport:
+  - 'TAXI'
+  - 'TRANSLINK'
